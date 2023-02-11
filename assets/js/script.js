@@ -59,4 +59,17 @@ $(document).ready(function () {
     }
 
     $("#phoneNumber, #message").on('input', updateUrl);
+
+    $(document).on("keydown", function (e) {
+        if (e.keyCode == 123) {
+            return false;
+        }
+        if (e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    });
+
+    $(document).on("contextmenu", function (e) {
+        return false;
+    });
 });
