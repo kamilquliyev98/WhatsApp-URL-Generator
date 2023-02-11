@@ -50,14 +50,19 @@
 
     <div class="container">
         <main>
-            <div class="py-5 text-center">
-                <img src="assets/images/logo.png" class="d-block mx-auto mb-4" height="60" alt="logo" loading="lazy">
-                <h2>WhatsApp URL Generator</h2>
-                <p class="lead">Send WhatsApp messages to unsaved contacts</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="py-5 text-center">
+                        <img src="assets/images/logo.png" class="d-block mx-auto mb-4" height="60" alt="logo"
+                            loading="lazy">
+                        <h2>WhatsApp URL Generator</h2>
+                        <p class="lead">Send WhatsApp messages to unsaved contacts</p>
+                    </div>
+                </div>
             </div>
 
             <div class="row g-5">
-                <div class="col-md-12 col-lg-12">
+                <div class="col-12 col-md-9 col-lg-9">
                     <div class="row g-3">
                         <div class="col-12 col-sm-12">
                             <label for="phoneNumber" class="form-label">Phone number *</label>
@@ -67,13 +72,19 @@
 
                         <div class="col-12 col-sm-12">
                             <label for="message" class="form-label">Message</label>
-                            <textarea type="text" class="form-control" id="message" rows="4"></textarea>
+                            <textarea type="text" class="form-control" id="message" rows="3"></textarea>
                             <div class="invalid-feedback"></div>
                         </div>
                     </div>
+                </div>
 
-                    <hr class="my-4">
+                <div class="col-12 col-md-3 col-lg-3">
+                    <div class="row g-3">
+                        <div id="qrcode"></div>
+                    </div>
+                </div>
 
+                <div class="col-12 col-md-12 col-lg-12">
                     <div class="btnDiv"></div>
                 </div>
             </div>
@@ -98,6 +109,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
         integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- QR Code JS -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
 

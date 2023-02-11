@@ -45,10 +45,20 @@ $(document).ready(function () {
 
         if (isPhoneNumberValid && isMessageValid) {
             $('.btnDiv').html(urlBtn);
+            phoneNumber = phoneNumber.replace(/\s+|\(|\)/g, '');
             let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
             $(".wa-url").attr("href", url);
+
+            $("#qrcode").empty();
+            new QRCode("qrcode", {
+                text: url,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
         } else {
             $('.wa-url').remove();
+            $("#qrcode").empty();
         }
     }
 
@@ -58,5 +68,5 @@ $(document).ready(function () {
         generateWhatsAppURL(phoneNumber, message);
     }
 
-    $("#phoneNumber, #message").on('input', updateUrl);
+    $("#phoneNumber, #message").bind('input propertychange', updateUrl);
 });
