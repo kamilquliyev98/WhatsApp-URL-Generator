@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let urlBtn = `<a href="#" class="w-100 btn btn-success btn-lg wa-url" target="_blank">Click me</a>`;
+    let urlBtn = `<a href="#" class="w-100 btn btn-success btn-lg wa-url" target="_blank">Go to WhatsApp</a>`;
 
     let isPhoneNumberValid = false;
     let isMessageValid = false;
