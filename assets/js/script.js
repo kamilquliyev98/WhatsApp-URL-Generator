@@ -46,7 +46,7 @@ $(document).ready(function () {
         if (isPhoneNumberValid && isMessageValid) {
             $('.btnDiv').html(urlBtn);
             phoneNumber = phoneNumber.replace(/\s+|\(|\)/g, '');
-            let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+            let url = `https://wa.me/${phoneNumber.replace(/\+/g, "")}?text=${encodeURIComponent(message)}`
             $(".wa-url").attr("href", url);
 
             $("#qrcode").empty();
